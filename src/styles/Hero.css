@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
   padding: 2rem;
 }
 
@@ -20,32 +21,64 @@
   color: #fff;
   max-width: 600px;
 }
+
+.social-icons {
+  position: absolute;
+  top: 1rem;
+  right: 17.5rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.social-icons a {
+  font-size: 0.8rem;
+  color: #7f7f7f;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #e18200;
+}
+p.heading-1{
+  font-size: 20px;
+  letter-spacing: 3px;
+}
 img.img-logo {
   width: 40rem;
   height: 5rem;
 }
+
 p.result{
   width: 50rem;
   font-size: 30px;
   font-weight: 600;
   letter-spacing: 1.5rem;
 }
+
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
+
 .hero-button {
-  width: 10rem;
+  width: 11rem;
+  padding: 7px 8px 8px 8px;
   background: #1a1a1a;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
+  letter-spacing: 1px;
   color: #fff;
   border: 2px solid #e18200;
   border-radius: 20px;
-  padding: 4px 4px 4px 8px;
+ 
 }
+
 .hero-button:hover {
   background-color: #e18200;
+}
+.arrow{
+  margin-left: 1rem;
 }
