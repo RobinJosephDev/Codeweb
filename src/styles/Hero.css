@@ -1,38 +1,34 @@
 .hero-section {
-    height: 40rem;
-    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #666;
-    max-width: 600px;
-  }
-  
-  .hero-button {
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    background-color: #fc9702;
-    color: #fff;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .hero-button:hover {
-    background-color: #e18200;
-  }
-  
+  height: 40rem;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  max-width: 600px;
+}
+.hero-content-services {
+  color: #fff;
+}
+.hero-buttons {
+  display: "flex";
+  gap: "1rem";
+  margin-top: "1rem";
+}
+
+.hero-button:hover {
+  background-color: #e18200;
+}
