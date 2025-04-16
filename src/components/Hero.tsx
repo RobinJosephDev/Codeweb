@@ -8,15 +8,15 @@ const Hero = () => {
       <div className="hero-content">
         <p>WEB · DESIGN · E-COMMERCE · SEO</p>
         <div className="logo">
-          <img src={logo} alt="Logo" className="w-24 h-auto" />
+          <img src={logo} alt="Logo" className="img-logo"/>
         </div>
-        <p>RESULT DRIVEN</p>
+        <p className="result">RESULT DRIVEN</p>
         <p>Affordable digital services for Canadians.</p>
 
         {/* Button Container */}
         <div className="hero-buttons">
-          <button className="hero-button">Get Started</button>
-          <button className="hero-button secondary">Our Services</button>
+          <button className="hero-button">GET STARTED</button>
+          <button className="hero-button secondary">OUR SERVICES</button>
         </div>
       </div>
     </section>

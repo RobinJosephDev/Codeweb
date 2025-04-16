@@ -1,5 +1,5 @@
 .hero-section {
-  height: 40rem;
+  height: 35rem;
   background: #1a1a1a;
   display: flex;
   justify-content: center;
@@ -20,15 +20,32 @@
   color: #fff;
   max-width: 600px;
 }
-.hero-content-services {
-  color: #fff;
+img.img-logo {
+  width: 40rem;
+  height: 5rem;
+}
+p.result{
+  width: 50rem;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.5rem;
 }
 .hero-buttons {
-  display: "flex";
-  gap: "1rem";
-  margin-top: "1rem";
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
-
+.hero-button {
+  width: 10rem;
+  background: #1a1a1a;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  border: 2px solid #e18200;
+  border-radius: 20px;
+  padding: 4px 4px 4px 8px;
+}
 .hero-button:hover {
   background-color: #e18200;
 }
