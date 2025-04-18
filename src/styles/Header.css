@@ -9,7 +9,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem; 
+  gap: 2rem;
 }
 
 /* Logo */
@@ -57,4 +57,36 @@ header {
 
 .cta-button .start-button:hover {
   background-color: #0056b3;
+}
+/* Small Tablets and Below */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .cta-button {
+    align-self: center;
+  }
+
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-container {
+    padding: 1rem;
+    align-items: center;
+  }
 }

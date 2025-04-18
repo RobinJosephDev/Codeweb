@@ -1,0 +1,110 @@
+.welcome-section {
+  height: 34.5rem;
+  padding: 3rem 1rem;
+  background-image: url("/public/assets/images/background_2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.welcome-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: start;
+  margin-top: 4rem;
+}
+
+.welcome-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.img-left,
+.img-right {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  gap: 1rem;
+}
+
+.welcome-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.welcome-content p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.btn-learn-more {
+  width: 10rem;
+  padding: 10px 3px 9px 5px;
+  background: #f89902;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  border-radius: 20px;
+}
+img.arrow {
+  margin-left: 5px;
+}
+.btn-learn-more:hover {
+  background-color: #1d4ed8;
+}
+
+/* Small Tablets and Below */
+@media (max-width: 880px) {
+  .welcome-container {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .welcome-content {
+    width: 100%;
+  }
+
+  .img-left,
+  .img-right {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .btn-learn-more {
+    width: 100%;
+    max-width: 10rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .welcome-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-content p {
+    font-size: 12px;
+  }
+
+  .img-left,
+  .img-right {
+    width: 6rem;
+    height: 6rem;
+  }
+}

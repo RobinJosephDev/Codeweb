@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Monoton:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Monoton:wght@200;300;400;500;600;700;800&display=swap");
 
 * {
   margin: 0;
@@ -7,23 +7,25 @@
   outline: none;
   list-style: none;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Roboto", sans-serif;
 }
 
 main {
-  overflow: hidden;
+  overflow: auto;
   height: 85vh;
   background-color: #fafbfd !important;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  overflow-y: hidden;
+  font-family: "Roboto", sans-serif;
+  overflow-y: auto;
 }
 
-@media (max-width: 400px) {
-  body, main {
-    padding: 0 0.5rem;
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  main {
+    height: auto;
+    padding-bottom: 2rem;
   }
 }
