@@ -1,0 +1,36 @@
+.tech-section {
+  display: flex;
+  justify-content: center;
+  height: 9rem;
+  padding: 3rem 1rem;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+.carousel {
+  position: relative;
+  width: 63rem;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.carousel-img {
+  height: 30px;
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+/* Adjust timing (20s), direction (scroll-left), or speed here */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

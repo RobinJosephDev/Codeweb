@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Welcome.css"; // Importing the CSS file
+import "../styles/Welcome.css";
 import left from "../../public/assets/images/we-deliver-on-clutch.png";
 import right from "../../public/assets/images/badge-local-excellence-ge.png";
 import arrow from "../../public/assets/images/arrow_icon.png";

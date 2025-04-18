@@ -1,6 +1,9 @@
+/* General Header Styling */
 header {
   background-color: #fff;
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 1000;
 }
 
 .header-container {
@@ -9,7 +12,6 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 
 /* Logo */
@@ -18,16 +20,20 @@ header {
   height: auto;
 }
 
-/* Navigation */
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Nav Links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.nav-links li {
-  list-style: none;
 }
 
 .nav-links li a {
@@ -39,10 +45,9 @@ header {
 
 .nav-links li a.active-link {
   color: #fc9702;
-  font-weight: 600;
 }
 
-/* CTA Button */
+/* CTA Buttons */
 .cta-button .start-button {
   background-color: #fc9702;
   color: white;
@@ -58,35 +63,54 @@ header {
 .cta-button .start-button:hover {
   background-color: #0056b3;
 }
-/* Small Tablets and Below */
-@media (max-width: 768px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .cta-button {
-    align-self: center;
-  }
-
+.cta-button.mobile {
+  display: none;
 }
 
-/* Extra Small Devices */
-@media (max-width: 480px) {
-  .nav-links {
+/* Burger Icon */
+.burger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fc9702;
+}
+
+/* Responsive Menu */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    padding: 1.5rem 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     flex-direction: column;
     align-items: center;
   }
 
-  .header-container {
-    padding: 1rem;
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
     align-items: center;
+  }
+
+  .cta-button.mobile {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .cta-button.desktop {
+    display: none;
   }
 }
