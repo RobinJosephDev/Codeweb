@@ -4,7 +4,7 @@ import Hero from "./Hero";
 import Welcome from "./Welcome";
 import Technologies from "./Technologies";
 import Services from "./Services";
-
+import Figures from "./Figures";
 const Home = () => {
   return (
     <div>
@@ -13,6 +13,7 @@ const Home = () => {
       <Welcome />
       <Technologies />
       <Services />
+      <Figures />
     </div>
   );
 };
