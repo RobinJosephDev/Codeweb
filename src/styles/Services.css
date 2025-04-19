@@ -1,5 +1,5 @@
 .services-section {
-  padding: 2rem;
+  padding: 7rem;
   background-color: #f9f9f9;
   display: flex;
   justify-content: center;
@@ -10,7 +10,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   max-width: 1063px;
-  width: 100%;
+  width: 95%;
   justify-items: center;
 }
 
@@ -20,7 +20,7 @@
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  width: 20rem;
+  width: 19rem;
   height: 36rem;
 }
 
@@ -37,6 +37,7 @@
 
 .service-card h2 {
   font-size: 1.2rem;
+  font-weight: 600;
   margin: 1.5rem 0;
 }
 
@@ -76,18 +77,19 @@
 @media (max-width: 1024px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 3rem;
+    max-width: 692px;
   }
 }
 
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .service-card {
     width: 100%;
-    max-width: 90%;
+    max-width: 300px;
   }
 }
