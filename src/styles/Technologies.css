@@ -1,36 +1,68 @@
 .tech-section {
+  position: relative; 
+  z-index: 1;  
   display: flex;
   justify-content: center;
-  height: 9rem;
-  padding: 3rem 1rem;
+  align-items: center;
+  height: auto;
+  padding: 2rem 1rem;
   background-color: #1a1a1a;
   overflow: hidden;
 }
 
 .carousel {
   position: relative;
-  width: 63rem;
+  width: 100%;
+  max-width: 63rem;
   overflow: hidden;
 }
 
 .carousel-track {
   display: flex;
   width: max-content;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 60s linear infinite;
+  will-change: transform; 
 }
 
 .carousel-img {
   height: 30px;
-  margin: 0 2rem;
+  margin: 0 1.5rem;
   flex-shrink: 0;
 }
 
-/* Adjust timing (20s), direction (scroll-left), or speed here */
+/* Keyframe for scrolling */
 @keyframes scroll-left {
   0% {
     transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 24px;
+    margin: 0 1rem;
+  }
+
+  .carousel-track {
+    animation-duration: 45s;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-img {
+    height: 20px;
+    margin: 0 0.75rem;
+  }
+
+  .tech-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .carousel-track {
+    animation-duration: 35s;
   }
 }
