@@ -5,6 +5,8 @@ import Welcome from "./Welcome";
 import Technologies from "./Technologies";
 import Services from "./Services";
 import Figures from "./Figures";
+import Info1 from "./Info1";
+import Info2 from "./Info2";
 const Home = () => {
   return (
     <div>
@@ -14,6 +16,8 @@ const Home = () => {
       <Technologies />
       <Services />
       <Figures />
+      <Info1 />
+      <Info2 />
     </div>
   );
 };

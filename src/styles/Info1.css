@@ -1,0 +1,143 @@
+.info1-section{
+  padding: 2rem 1rem;
+}
+
+.info1-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 5rem 15rem;
+}
+
+.web-design-content > p,
+.web-development-content > p {
+  font-size: 13px;
+  margin-bottom: 1.5rem;
+  color: #a7a7a7;
+}
+
+.web-design-content > h2,
+.web-development-content > h2 {
+  margin-bottom: 2.3rem;
+}
+
+.web-design,
+.web-development {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.web-design {
+  flex-direction: row;
+}
+
+.web-development {
+  flex-direction: row-reverse;
+}
+
+.web-design-image,
+.web-development-image {
+  flex: 0.65;
+}
+
+.web-design-content,
+.web-development-content {
+  flex: 1;
+}
+.web-design-content {
+  padding-left: 3.7rem;
+}
+.web-development-content {
+  padding-right: 3.7rem;
+}
+
+.img-web-design,
+.img-web-development {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-buttons-web-design {
+  margin-top: 2.7rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.hero-buttons-web-development {
+  margin-top: 2.7rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.btn-info1-learn-more {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 10rem;
+  padding: 10px 25px;
+  background: #f89902;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.info1-button.secondary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: 10rem;
+  padding: 10px 25px;
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #f89902;
+  border: 3px solid #f89902;
+  border-radius: 20px;
+}
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .info1-container {
+    padding: 3rem 5%;
+  }
+
+  .web-design,
+  .web-development {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .web-design-content,
+  .web-development-content {
+    padding: 0;
+  }
+
+  .hero-buttons-web-design,
+  .hero-buttons-web-development {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .btn-info1-learn-more,
+  .info1-button.secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .web-design-content > p,
+  .web-development-content > p {
+    font-size: 12px;
+  }
+
+  .web-design-content > h2,
+  .web-development-content > h2 {
+    font-size: 1.5rem;
+  }
+}
