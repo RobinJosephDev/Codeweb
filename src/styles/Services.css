@@ -1,5 +1,5 @@
 .services-section {
-  padding: 3rem 1rem; /* Mobile-first padding */
+  padding: 8rem 1rem;
   background-color: #f9f9f9;
   display: flex;
   justify-content: center;
@@ -8,9 +8,8 @@
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
-  max-width: 1200px;
   justify-items: center;
 }
 
@@ -21,7 +20,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   height: auto;
   padding-bottom: 2rem;
 }
@@ -89,18 +88,25 @@
 @media (min-width: 768px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 3rem;
+    max-width: 1024px;
   }
 
   .service-card {
-    max-width: 320px;
+    max-width: 300px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .services-grid {
+    max-width: 644px;
   }
 }
 
 /* Desktop and up */
 @media (min-width: 1024px) {
   .services-section {
-    padding: 5rem 4rem;
+    padding: 7rem 4rem;
   }
 
   .services-grid {
@@ -109,7 +115,7 @@
   }
 
   .service-card {
-    max-width: 340px;
+    max-width: 300px;
     height: 36rem;
   }
 
