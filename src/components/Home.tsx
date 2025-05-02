@@ -7,6 +7,7 @@ import Services from "./Services";
 import Figures from "./Figures";
 import Info1 from "./Info1";
 import Info2 from "./Info2";
+import Rates from "./Rates";
 const Home = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const Home = () => {
       <Figures />
       <Info1 />
       <Info2 />
+      <Rates />
     </div>
   );
 };

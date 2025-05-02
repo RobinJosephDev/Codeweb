@@ -1,17 +1,16 @@
-/* 1. Make the container a vertical flexbox and push items to the right */
+/* Base Styles (Desktop First) */
 .info2-section {
   height: 50rem;
 }
+
 .info2-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  vertical-align: middle;
   gap: 4rem;
   padding: 5rem;
   padding-top: 8rem;
   height: 50rem;
-  /* Background image */
   background-image: url("/public/assets/images/info2.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -19,21 +18,23 @@
   background-color: #f5f5f5;
 }
 
-/* 2. (Optional) Constrain the width of each panel */
 .info2-container .seo,
 .info2-container .google-ads {
   width: 100%;
   max-width: 600px;
 }
+
 img.seo-design,
 img.google-ads {
   width: 50px !important;
 }
+
 h3.seo-heading,
 h3.google-ads-heading {
   color: #f5f5f5;
   font-size: 22px;
 }
+
 .seo-content > p,
 .google-ads-content > p {
   color: #f5f5f5;
@@ -41,7 +42,7 @@ h3.google-ads-heading {
   width: 410px;
   line-height: 1.5rem;
 }
-/* 3. (Optional) Ensure inner content still lays out nicely */
+
 .seo-image,
 .google-ads-image {
   display: flex;
@@ -50,7 +51,6 @@ h3.google-ads-heading {
   gap: 1rem;
 }
 
-/* 4. Add some breathing room under each heading/content block */
 .seo-content,
 .google-ads-content {
   margin-top: 1rem;
@@ -72,4 +72,94 @@ h3.google-ads-heading {
   color: #fff;
   border: 3px solid #f89902;
   border-radius: 20px;
+}
+
+/* Responsive Styles */
+
+/* Large Tablets & Small Laptops (<=1024px) */
+@media (max-width: 1024px) {
+  .info2-section,
+  .info2-container {
+    height: auto;
+  }
+
+  .info2-container .seo,
+  .info2-container .google-ads {
+    max-width: 500px;
+  }
+
+  .seo-content > p,
+  .google-ads-content > p {
+    width: 100%;
+  }
+}
+
+/* Tablets (<=768px) */
+@media (max-width: 768px) {
+  .info2-container {
+    align-items: left;
+    padding: 3rem 2rem;
+    gap: 3rem;
+  }
+
+  img.seo-design,
+  img.google-ads {
+    width: 40px !important;
+  }
+
+  h3.seo-heading,
+  h3.google-ads-heading {
+    font-size: 20px;
+    text-align: left;
+  }
+  .seo-content,
+  .google-ads-content {
+    align-items: left;
+  }
+  .seo-content > p,
+  .google-ads-content > p {
+    font-size: 12px;
+    line-height: 1.4rem;
+    text-align: left;
+  }
+
+  .btn-info2-learn-more {
+    width: 10rem;
+    font-size: 0.7rem;
+    padding: 8px 20px;
+  }
+}
+
+/* Mobile Phones (<=480px) */
+@media (max-width: 480px) {
+  .info2-container {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  img.seo-design,
+  img.google-ads {
+    width: 30px !important;
+  }
+
+  h3.seo-heading,
+  h3.google-ads-heading {
+    font-size: 18px;
+  }
+  .seo-content,
+  .google-ads-content {
+    align-items: left;
+  }
+  .seo-content > p,
+  .google-ads-content > p {
+    font-size: 11px;
+    width: 100%;
+    line-height: 1.4rem;
+  }
+
+  .btn-info2-learn-more {
+    width: 9rem;
+    padding: 7px 18px;
+    font-size: 0.65rem;
+  }
 }

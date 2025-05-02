@@ -1,0 +1,34 @@
+.slider-container {
+    width: 600px;
+    margin: auto;
+  }
+  
+  .thumbs-slider {
+    margin-bottom: 20px;
+  }
+  
+  .thumb-slide {
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 8px;
+  }
+  
+  .thumb-slide.swiper-slide-thumb-active {
+    opacity: 1;
+    background-color: #e0f7fa; /* light blue background for active */
+  }
+  
+  .thumb-slide img {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .main-slider img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
