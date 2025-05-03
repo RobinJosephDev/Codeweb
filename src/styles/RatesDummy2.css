@@ -1,0 +1,68 @@
+.rates-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .main-swiper {
+    margin-bottom: 20px;
+  }
+  
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .slide-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .slide-text h3 {
+    margin-top: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .slide-text p {
+    margin: 10px 0;
+  }
+  
+  .slide-text button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slide-text button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .thumbs-swiper {
+    padding: 10px 0;
+    overflow: hidden;
+  }
+  
+  .thumb-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .thumb-slide img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 5px;
+  }
+  
+  .thumb-slide span {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+  

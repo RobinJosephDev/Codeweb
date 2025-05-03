@@ -84,7 +84,7 @@ const Rates = () => {
             modules={[Thumbs]}
             slidesPerView={5}
             spaceBetween={10}
-            loop={true}
+            loop={false} // Disable loop
             watchSlidesProgress
             centeredSlides={true}
             slideToClickedSlide={true}
@@ -102,7 +102,7 @@ const Rates = () => {
             modules={[Thumbs, Navigation]}
             thumbs={{ swiper: thumbsSwiper }}
             spaceBetween={20}
-            loop={true}
+            loop={true} // Keep loop enabled
             navigation
             onSlideChange={handleSlideChange}
             className="main-slider"
