@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Thumbs } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 import logo_design from "../../public/assets/images/logo_design.png";
 import ads from "../../public/assets/images/ads.png";
@@ -14,78 +17,98 @@ import logo_design_black from "../../public/assets/images/logo_design_black.png"
 import arrow from "../../public/assets/images/arrow_icon.png";
 import "../styles/Rates.css";
 
-const sliderData = [
-  {
-    title: "Logo Design",
-    description: "We provide tailored solutions for your business needs.",
-    image: logo_design,
-  },
-  {
-    title: "Ad words",
-    description: "Top-tier apps for iOS and Android platforms.",
-    image: ads,
-  },
-  {
-    title: "Web Design",
-    description: "Boost your online sales with our smart systems.",
-    image: design,
-  },
-  {
-    title: "SEO",
-    description: "Top-tier apps for iOS and Android platforms.",
-    image: seo,
-  },
-  {
-    title: "Social Media",
-    description: "Boost your online sales with our smart systems.",
-    image: social,
-  },
-];
-
 const Rates = () => {
-  const [nav1, setNav1] = useState<Slider | null>(null);
-  const [nav2, setNav2] = useState<Slider | null>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+
+  const sliderData = [
+    {
+      title: "Logo Design",
+      description: "We provide tailored solutions for your business needs.",
+      image: logo_design,
+    },
+    {
+      title: "Ad words",
+      description: "Top-tier apps for iOS and Android platforms.",
+      image: ads,
+    },
+    {
+      title: "Web Design",
+      description: "Boost your online sales with our smart systems.",
+      image: design,
+    },
+    {
+      title: "SEO",
+      description: "Top-tier apps for iOS and Android platforms.",
+      image: seo,
+    },
+    {
+      title: "Social Media",
+      description: "Boost your online sales with our smart systems.",
+      image: social,
+    },
+  ];
+
+  const handleSlideChange = (swiper: SwiperType) => {
+    const realIndex = swiper.realIndex;
+
+    if (thumbsSwiper) {
+      const totalSlides = thumbsSwiper.slides.length;
+      const slidesPerView = 5;
+
+      // Calculate the index to center the active thumbnail
+      let targetIndex = realIndex - Math.floor(slidesPerView / 2);
+      if (targetIndex < 0) {
+        targetIndex = 0;
+      } else if (targetIndex > totalSlides - slidesPerView) {
+        targetIndex = totalSlides - slidesPerView;
+      }
+
+      thumbsSwiper.slideTo(targetIndex, 300);
+    }
+  };
 
   return (
     <section className="rates-section">
       <div className="rates-container">
         <h2>Competitive Services</h2>
         <p>
-          Our coders develop web and mobile applications and take your business to the next level.
-          <br />
-          Our clients save an average of $60,000 per annum by employing our
+          Our coders develop web and mobile applications to the next level. Our
+          clients save an average of $60,000 per annum by employing our
           services.
         </p>
 
         <div className="sliders-wrapper">
           {/* Thumbnail Slider */}
-          <Slider
-            asNavFor={nav1 as Slider}
-            ref={(slider: Slider | null) => setNav2(slider)}
-            slidesToShow={5}
-            swipeToSlide={true}
-            focusOnSelect={true}
-            centerMode={true}
-            infinite={true}
-            className="slider-nav"
+          <Swiper
+            onSwiper={setThumbsSwiper}
+            modules={[Thumbs]}
+            slidesPerView={5}
+            spaceBetween={10}
+            loop={true}
+            watchSlidesProgress
+            centeredSlides={true}
+            slideToClickedSlide={true}
+            className="thumb-slider"
           >
             {sliderData.map((item, index) => (
-              <div key={index}>
+              <SwiperSlide key={index}>
                 <img src={item.image} alt={item.title} />
-              </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
 
           {/* Main Slider */}
-          <Slider
-            asNavFor={nav2 as Slider}
-            ref={(slider: Slider | null) => setNav1(slider)}
-            arrows={false}
-            fade={true}
-            className="slider-for"
+          <Swiper
+            modules={[Thumbs, Navigation]}
+            thumbs={{ swiper: thumbsSwiper }}
+            spaceBetween={20}
+            loop={true}
+            navigation
+            onSlideChange={handleSlideChange}
+            className="main-slider"
           >
             {sliderData.map((item, index) => (
-              <div key={index}>
+              <SwiperSlide key={index}>
                 <div className="slide-content">
                   <div className="left-content">
                     <div className="image-wrapper">
@@ -117,9 +140,9 @@ const Rates = () => {
                     <span>$2400 / month</span>
                   </div>
                 </div>
-              </div>
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
         </div>
       </div>
     </section>

@@ -1,179 +1,61 @@
-/* === General Section Styling === */
-.rates-section {
-  padding: 7rem 2rem;
-  background-color: #f4f4f4;
+.rates-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
   text-align: center;
 }
 
-.rates-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.rates-container p {
-  margin-top: 2rem;
-  font-size: 13px;
-  color: #aeaeae;
-}
-/* === Slider Wrappers === */
-.sliders-wrapper {
-  margin-top: 3rem;
-  overflow: hidden;
-  position: relative;
-}
-
-/* === Main Slider === */
-.main-slider {
-  display: flex !important; /* Ensure horizontal layout */
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 1rem 0;
-}
-
-.main-slider .slide-content {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.main-slider img {
-  width: 55px;
-  height: 55px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.main-slider h3 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
-}
-
-.main-slider p {
-  font-size: 1rem;
-  max-width: 240px;
-  margin: 0 auto;
-  color: #333;
-}
-.slide-content {
-  display: flex;
-  flex-direction: row;
-}
-.left-content,
-.right-content {
-  width: 300px;
-  height: 300px;
-  background-color: black;
-  color: #f4f4f4;
-}
-.center-content {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 280px;
-  height: 400px;
-  background-color: #fff;
-  color: #000;
-}
-/* === Learn More Button === */
-.btn-rates-learn-more {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 10px 25px;
-  background: #f89902;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  color: #fff;
-  border-radius: 20px;
-  margin-top: 10px;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-}
-
-.btn-rates-learn-more:hover {
-  background-color: #e07e00;
-}
-
-.rates-arrow {
-  width: 12px !important;
-  height: 7px !important;
-  margin-left: 5px;
-}
-
-.slider-nav .slick-slide {
-  margin: 0 3px;
-}
-
-.slider-nav .slick-list {
-  margin: 0px 0px 0px 226px;
-  width: 54rem;
-}
-
-.slick-list {
-  padding: 0 100px 0px 120px !important;
-}
-
-/* .slick-slide.slick-cloned{
-  width: 10rem !important;
-} */
-
-/* === Thumbnail Slider === */
 .thumb-slider {
-  width: 100%;
-  max-width: 1000px;
-  margin: 2rem auto 0;
-  display: flex !important;
-  gap: 1rem;
-  overflow-x: auto;
-  padding-bottom: 1rem;
+  margin-bottom: 30px;
 }
 
-.slick-slide.slick-center img {
-  transform: scale(1.1);
-  border-radius: 100rem;
-  border: 2px solid #f89902;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  background-color: #f89902;
-}
-/* Base style for all slide containers */
-.slick-slide > div > div {
-  background-color: #fff5e6; /* Light orange */
+.thumb-slide {
   padding: 10px;
-  border-radius: 12px;
-  transition: all 0.3s ease-in-out;
+  opacity: 0.5;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Style for images inside all slides */
-.slick-slide img {
-  width: 50px;
-  opacity: 0.6;
-  transform: scale(1);
-  transition: all 0.3s ease-in-out;
+.thumb-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  background: white;
   border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
 }
 
-/* Highlight the center slide */
-.slick-slide.slick-center > div > div {
-  background-color: #ffe0b2; /* Brighter orange */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+.thumb-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* Center image style */
-.slick-slide.slick-center img {
-  opacity: 1;
+.slick-center .thumb-slide {
+  opacity: 1 !important;
   transform: scale(1.1);
-  border: 3px solid #f89902;
 }
 
-/* Hover effect */
-.slick-slide img:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  opacity: 0.9;
+.thumb-slider .slick-list {
+  overflow: visible;
+}
+
+.thumb-slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.main-slider .main-slide {
+  padding: 20px;
+}
+
+.main-slide h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.main-slide p {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto;
 }
