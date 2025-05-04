@@ -1,11 +1,11 @@
 import React from "react";
 import "../styles/Technologies.css";
-import drupal from "../../public/assets/images/drupal.png";
-import hubspot from "../../public/assets/images/hubspot.png";
-import joomla from "../../public/assets/images/joomla.png";
-import shopify from "../../public/assets/images/shopify.png";
-import woocommerce from "../../public/assets/images/woocommerce.png";
-import wordpress from "../../public/assets/images/wordpress.png";
+import drupal from "../assets/images/drupal.png";
+import hubspot from "../assets/images/hubspot.png";
+import joomla from "../assets/images/joomla.png";
+import shopify from "../assets/images/shopify.png";
+import woocommerce from "../assets/images/woocommerce.png";
+import wordpress from "../assets/images/wordpress.png";
 
 const logos = [drupal, hubspot, joomla, shopify, woocommerce, wordpress];
 

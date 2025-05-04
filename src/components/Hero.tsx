@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Hero.css";
-import logo from "../../public/assets/images/logo-banner.png";
-import arrow from "../../public/assets/images/arrow_icon.png";
+import logo from "../assets/images/logo-banner.png";
+import arrow from "../assets/images/arrow_icon.png";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";

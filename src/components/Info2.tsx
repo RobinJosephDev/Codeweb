@@ -1,7 +1,7 @@
 import React from "react";
-import google_ads from "../../public/assets/images/google_ads.png";
-import seo from "../../public/assets/images/seo.png";
-import arrow from "../../public/assets/images/arrow_icon.png";
+import google_ads from "../assets/images/google_ads.png";
+import seo from "../assets/images/seo.png";
+import arrow from "../assets/images/arrow_icon.png";
 import "../styles/Info2.css";
 const Info2 = () => {
   return (

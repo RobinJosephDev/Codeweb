@@ -1,9 +1,9 @@
 import React from "react";
 import "../styles/Info1.css";
-import web_design from "../../public/assets/images/web_design.png";
-import web_development from "../../public/assets/images/web_development.png";
-import arrow from "../../public/assets/images/arrow_icon.png";
-import arrow_orange from "../../public/assets/images/arrow_icon_orange.png";
+import web_design from "../assets/images/web_design.png";
+import web_development from "../assets/images/web_development.png";
+import arrow from "../assets/images/arrow_icon.png";
+import arrow_orange from "../assets/images/arrow_icon_orange.png";
 const Info1 = () => {
   return (
     <section className="info1-section">

@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/Figures.css";
-import experience from "../../public/assets/images/experience.png";
-import customers from "../../public/assets/images/customers.png";
-import members from "../../public/assets/images/members.png";
+import experience from "../assets/images/experience.png";
+import customers from "../assets/images/customers.png";
+import members from "../assets/images/members.png";
 
 const figuresData = [
   {

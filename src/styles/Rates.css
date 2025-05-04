@@ -1,5 +1,5 @@
 .rates-section {
-  padding: 4rem 2rem;
+  padding: 8rem 2rem;
   background-color: #f4f4f4;
   text-align: center;
 }
@@ -15,9 +15,14 @@
 }
 
 /* Main Slider */
-.swiper-wrapper{
-  gap: 2rem;
+.swiper-horizontal {
+  margin-top: 4rem;
 }
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
 .main-slider .slide-content {
   display: flex;
   flex-direction: row;
@@ -47,8 +52,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 280px;
-  height: 400px;
+  border-radius: 7px;
+  width: 300px;
+  height: 355px;
   background-color: #fff;
   color: #000;
 }
@@ -60,7 +66,12 @@
   background-color: black;
   color: #f4f4f4;
 }
-
+.left-content{
+  border-radius: 7px 0px 0px 7px;
+}
+.right-content{
+  border-radius: 0px 7px 7px 0px;
+}
 .btn-rates-learn-more {
   display: flex;
   align-items: center;
@@ -80,40 +91,57 @@
   height: 7px !important;
   margin-left: 5px;
 }
-
+.swiper-button-prev,  .swiper-button-next{
+  color: #f0a021;
+}
 /* Thumbnail Slider */
 .thumb-slider {
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
 }
-.thumb-slider .swiper-wrapper{
+.thumb-slider .swiper-wrapper {
+  gap: 6rem;
+  margin-left: -10rem;
   transition-duration: 0ms;
   transform: translate3d(217px, 0px, 0px) !important;
   transition-delay: 0ms;
 }
 .thumb-slider img {
-  height: 55px;
-  width: 55px;
-  object-fit: cover;
-  border-radius: 8px;
+  height: 45px;
+  width: 45px;
   opacity: 0.6;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: darksalmon;
 }
-
+.thumb-container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thumb-img-wrapper {
+  width: 80px;
+  border-radius: 100rem;
+  padding: 1rem;
+  background-color: #fbca80;
+}
 .thumb-slider .swiper-slide-thumb-active img {
   opacity: 1;
-  background-color: #f89902;
-  border-radius: 100rem;
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
+.thumb-slider .swiper-slide-thumb-active .thumb-img-wrapper {
+  width: 80px;
+  background-color: #f89902;
+}
 .thumb-slider .swiper-slide {
-  width: 80px !important;
+  width: 93px !important;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.thumb-title {
+  color: #9a9a9a;
+}
+.swiper-slide-thumb-active .thumb-title {
+  color: black;
 }

@@ -6,15 +6,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import logo_design from "../../public/assets/images/logo_design.png";
-import ads from "../../public/assets/images/ads.png";
-import design from "../../public/assets/images/design.png";
-import seo from "../../public/assets/images/seo.png";
-import social from "../../public/assets/images/social.png";
-import cost from "../../public/assets/images/cost.png";
-import codeweb from "../../public/assets/images/codeweb.png";
-import logo_design_black from "../../public/assets/images/logo_design_black.png";
-import arrow from "../../public/assets/images/arrow_icon.png";
+import logo_design from "../assets/images/logo_design.png";
+import ads from "../assets/images/ads.png";
+import design from "../assets/images/design.png";
+import seo from "../assets/images/seo.png";
+import social from "../assets/images/social.png";
+import cost from "../assets/images/cost.png";
+import codeweb from "../assets/images/codeweb.png";
+import logo_design_black from "../assets/images/logo_design_black.png";
+import arrow from "../assets/images/arrow_icon.png";
 import "../styles/Rates.css";
 
 const Rates = () => {
@@ -22,15 +22,21 @@ const Rates = () => {
 
   const sliderData = [
     {
-      title: "Logo Design",
-      description: "We provide tailored solutions for your business needs.",
-      image: logo_design,
+      title: "Social Media",
+      description: "Boost your online sales with our smart systems.",
+      image: social,
     },
     {
       title: "Ad words",
       description: "Top-tier apps for iOS and Android platforms.",
       image: ads,
     },
+    {
+      title: "Logo Design",
+      description: "We provide tailored solutions for your business needs.",
+      image: logo_design,
+    },
+
     {
       title: "Web Design",
       description: "Boost your online sales with our smart systems.",
@@ -40,11 +46,6 @@ const Rates = () => {
       title: "SEO",
       description: "Top-tier apps for iOS and Android platforms.",
       image: seo,
-    },
-    {
-      title: "Social Media",
-      description: "Boost your online sales with our smart systems.",
-      image: social,
     },
   ];
 
@@ -84,7 +85,7 @@ const Rates = () => {
             modules={[Thumbs]}
             slidesPerView={5}
             spaceBetween={10}
-            loop={false} // Disable loop
+            loop={false}
             watchSlidesProgress
             centeredSlides={true}
             slideToClickedSlide={true}
@@ -92,7 +93,14 @@ const Rates = () => {
           >
             {sliderData.map((item, index) => (
               <SwiperSlide key={index}>
-                <img src={item.image} alt={item.title} />
+                <div className="thumb-container">
+                  <div className="thumb-img-wrapper">
+                    <img src={item.image} alt={item.title} />
+                  </div>
+                  <div className="thumb-title">
+                    <h6>{item.title}</h6>
+                  </div>
+                </div>
               </SwiperSlide>
             ))}
           </Swiper>

@@ -1,6 +1,6 @@
 import React from "react";
-import arrow from "../../public/assets/images/arrow_icon.png";
-import default_1 from "../../public/assets/images/default_1.png";
+import arrow from "../assets/images/arrow_icon.png";
+import default_1 from "../assets/images/default_1.png";
 import "../styles/Services.css";
 
 const servicesData = [

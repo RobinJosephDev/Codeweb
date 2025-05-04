@@ -7,14 +7,14 @@ import "swiper/css/thumbs";
 import "swiper/css/navigation";
 import "swiper/css/free-mode";
 import "./slider.css";
-import logo_design from "../../public/assets/images/logo_design.png";
-import ads from "../../public/assets/images/ads.png";
-import design from "../../public/assets/images/design.png";
-import seo from "../../public/assets/images/seo.png";
-import social from "../../public/assets/images/social.png";
-import cost from "../../public/assets/images/cost.png";
-import codeweb from "../../public/assets/images/codeweb.png";
-import logo_design_black from "../../public/assets/images/logo_design_black.png";
+import logo_design from "../assets/images/logo_design.png";
+import ads from "../assets/images/ads.png";
+import design from "../assets/images/design.png";
+import seo from "../assets/images/seo.png";
+import social from "../assets/images/social.png";
+import cost from "../assets/images/cost.png";
+import codeweb from "../assets/images/codeweb.png";
+import logo_design_black from "../assets/images/logo_design_black.png";
 
 const slides = [
   { id: 1, image: logo_design },
